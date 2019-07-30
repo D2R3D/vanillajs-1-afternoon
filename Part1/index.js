@@ -3,6 +3,10 @@ const board = [];
 function play(clickedId) {
   const playerSpan = document.getElementById('player');
   const clickedElement = document.getElementById(clickedId);
+}
+
+  console.log(playerSpan)
+  console.log(clickedElement)
 
   if (playerSpan.innerText === 'X') {
     playerSpan.innerText = 'O';
@@ -25,7 +29,7 @@ function play(clickedId) {
   const bottomCenter = board[7];
   const bottomRight = board[8];
 
-  // CHECKS ALL WINNING COMBINATIONS
+
   if (topLeft !== undefined && topLeft === topCenter && topLeft === topRight) {
     alert(`${topLeft} is the winner`);
     return;
